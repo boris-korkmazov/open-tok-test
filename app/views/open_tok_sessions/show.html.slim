@@ -1,0 +1,13 @@
+script src="https://static.opentok.com/v2/js/opentok.js"
+= javascript_include_tag 'app', 'data-turbolinks-track': 'reload'
+h2
+  | Сессия:
+  '
+  = @session.name
+
+p
+  =link_to 'Список сессий', open_tok_sessions_path, class: 'btn btn-default'
+
+#videos
+  #subscriber
+  #publisher

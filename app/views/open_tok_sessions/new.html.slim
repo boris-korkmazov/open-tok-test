@@ -1,0 +1,14 @@
+h2 Новая сессия
+.row
+  .col-sm-6
+    -if @session.errors.full_messages.count > 0
+      .alert.alert-danger
+        -@session.errors.full_messages.each do |item|
+          p
+            = item
+    =form_for @session do |f|
+      .form-group
+        = f.label 'Название'
+        = f.text_field :name, class: 'form-control'
+      .form-group
+        = f.submit 'Сохранить', class: 'btn btn-success'
