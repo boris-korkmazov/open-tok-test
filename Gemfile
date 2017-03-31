@@ -19,7 +19,9 @@ gem 'bootstrap-sass'
 gem 'font-awesome-rails'
 gem 'slim-rails'
 gem "opentok", "~> 2.3", require: "opentok"
-gem "pg", group: :production
+group :production do
+  gem 'pg'
+end
 
 group :development, :test do
   gem 'pry'
